@@ -24,6 +24,22 @@ body {
   background: linear-gradient(to right, #0b1f33, #0e2a44);
   padding: 22px 40px;
 }
+/* HEADER SHRINK STATE */
+
+.header.shrink {
+  padding: 10px 40px;
+  transition: padding 0.3s ease;
+}
+
+.header.shrink .logo-wrap img {
+  height: 34px;
+}
+
+.header.shrink .logo-text {
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+
 
 .header .nav {
   display: flex;
