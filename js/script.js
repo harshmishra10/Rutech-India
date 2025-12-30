@@ -20,5 +20,26 @@ window.addEventListener("scroll", function () {
   } else {
     header.classList.remove("shrink");
   }
+    // Product accordion
+document.querySelectorAll(".product-header").forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.parentElement;
+    item.classList.toggle("active");
+  });
+});
+
+// Product search filter
+const searchInput = document.getElementById("productSearch");
+
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    const value = searchInput.value.toLowerCase();
+    document.querySelectorAll(".product-item").forEach(item => {
+      const text = item.innerText.toLowerCase();
+      item.style.display = text.includes(value) ? "block" : "none";
+    });
+  });
+}
+
 });
 
