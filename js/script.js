@@ -9,3 +9,16 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+// Header shrink on scroll
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+
+  if (!header) return;
+
+  if (window.scrollY > 60) {
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+});
+
