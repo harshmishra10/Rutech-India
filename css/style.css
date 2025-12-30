@@ -204,16 +204,16 @@ body {
 }
    /* ===== ABOUT SECTION ALIGNMENT ===== */
 
-.about-section h2 {
+.about-reveal h2 {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.about-section p {
+.about-reveal p {
   text-align: justify;
   line-height: 1.7;
 }
-.about-section {
+.about-reveal {
   max-width: 1100px;
   margin: 0 auto;
 }
