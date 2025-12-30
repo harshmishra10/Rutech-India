@@ -241,6 +241,22 @@ body {
    section {
   position: relative;
 }
+.about {
+  padding: 80px 40px;
+  background: #000;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about p {
+  text-align: justify;
+  line-height: 1.8;
+  max-width: 1100px;
+  margin: 0 auto 18px auto;
+}
 
 
 
