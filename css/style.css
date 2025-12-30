@@ -50,6 +50,12 @@ body {
   height: 42px;
   width: auto;
 }
+/* LOGO HOVER GLOW */
+
+.logo-wrap:hover img {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.35));
+  transition: filter 0.3s ease;
+}
 
 .logo-text {
   font-size: 32px;
