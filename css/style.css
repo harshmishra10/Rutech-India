@@ -272,10 +272,10 @@ body {
 }
 
 .products-title {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 40px;
+  font-size: clamp(32px, 4vw, 42px);
+  margin-bottom: 20px;
 }
+
 
 /* SEARCH BAR (PILL) */
 .product-search {
@@ -371,6 +371,23 @@ body {
   .products-title {
     font-size: 32px;
   }
+}
+/* ===== PRODUCTS PAGE LAYOUT FIX ===== */
+
+.products-page {
+  max-width: 900px;   /* KEY FIX */
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+.product-search {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 60px;
+}
+
+.product-search input {
+  width: 100%;
+  max-width: 520px;
 }
 
 
