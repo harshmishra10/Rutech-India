@@ -38,6 +38,26 @@ body {
   letter-spacing: 4px;
   color: #ffffff;
 }
+/* LOGO + TEXT WRAP (IMAGE + TEXT) */
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-wrap img {
+  height: 42px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
 
 /* NAV LINKS */
 .header nav a {
@@ -148,4 +168,13 @@ body {
     font-size: 38px;
     letter-spacing: 2px;
   }
+   .logo-wrap img {
+  height: 34px;
+}
+
+.logo-text {
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+
 }
