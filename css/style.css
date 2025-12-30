@@ -202,22 +202,22 @@ body {
   font-size: 24px;
   letter-spacing: 1.5px;
 }
-   /* ===== ABOUT SECTION ALIGNMENT ===== */
+/* ===== ABOUT SECTION ALIGNMENT ===== */
 
-.about-reveal h2 {
+.about h2 {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.about-reveal p {
+.about p {
   text-align: justify;
   line-height: 1.7;
 }
-.about-reveal {
+
+.about {
   max-width: 1100px;
   margin: 0 auto;
 }
-
 
 
 }
