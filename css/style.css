@@ -380,13 +380,10 @@ body {
     gap: 12px;
   }
 
-.header nav {
-  gap: 16px; /* clean mobile spacing */
-}
-
-.header nav a {
-  font-size: 14px;
-}
+  .header nav a {
+    margin-left: 10px;
+    font-size: 10px;
+  }
 
   .logo-wrap img {
     height: 38px;
