@@ -20,6 +20,46 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+   /* =====================
+   HERO TYPING EFFECT
+===================== */
+
+const typingTarget = document.getElementById("typing-text");
+
+if (typingTarget) {
+  const textLines = [
+    "SOLVING PROBLEMS",
+    "OF CASTINGS"
+  ];
+
+  let lineIndex = 0;
+  let charIndex = 0;
+  let currentText = "";
+  let isDeleting = false;
+
+  function typeEffect() {
+    if (lineIndex < textLines.length) {
+      const fullText = textLines[lineIndex];
+
+      currentText = fullText.slice(0, charIndex + 1);
+      typingTarget.innerHTML =
+        currentText + (lineIndex === 0 ? "<br>" : "");
+
+      charIndex++;
+
+      if (charIndex === fullText.length) {
+        lineIndex++;
+        charIndex = 0;
+        setTimeout(typeEffect, 600); // pause between lines
+        return;
+      }
+    }
+    setTimeout(typeEffect, 60); // typing speed
+  }
+
+  typeEffect();
+}
+
 
   /* =====================
      HEADER SHRINK
