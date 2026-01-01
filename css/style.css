@@ -682,5 +682,45 @@ textarea {
 [data-theme="light"] .page-subtitle {
   color: #475569;
 }
+/* =====================
+   PRODUCTS PAGE – LIGHT THEME FIX
+===================== */
+
+/* Search bar */
+[data-theme="light"] .product-search input {
+  background: #ffffff;
+  color: #020617;
+  border: 1px solid #cbd5e1;
+}
+
+[data-theme="light"] .product-search input::placeholder {
+  color: #64748b;
+}
+
+/* Product accordion container */
+[data-theme="light"] .product-item {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+}
+
+/* Hover glow (still premium) */
+[data-theme="light"] .product-item:hover {
+  box-shadow: 0 0 18px rgba(2, 132, 199, 0.25);
+}
+
+/* Product header text */
+[data-theme="light"] .product-header {
+  color: #020617;
+}
+
+/* Plus icon */
+[data-theme="light"] .product-header span {
+  color: #020617;
+}
+
+/* Expanded content text */
+[data-theme="light"] .product-content p {
+  color: #334155;
+}
 
 
