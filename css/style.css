@@ -16,26 +16,29 @@
   --accent: #38bdf8;
 }
 /* =====================
-   LIGHT THEME (PHASE 2 – FIXED)
+   LIGHT THEME (PHASE 2 – CORRECTED)
 ===================== */
 
 [data-theme="light"] {
-  /* MAIN BACKGROUNDS */
+  /* MAIN PAGE BACKGROUND */
   --bg-main: #f8fafc;
 
   /* KEEP HEADER / CTA / FOOTER DARK */
   --bg-header: #0b1f33;
   --bg-deep: #020617;
 
-  /* TEXT */
+  /* BODY TEXT (LIGHT THEME CONTENT) */
   --text-main: #020617;
-  --text-nav: #e5e7eb;      /* nav text stays light */
   --text-muted: #475569;
   --text-soft: #334155;
+
+  /* HEADER / NAV TEXT MUST STAY LIGHT */
+  --text-nav: #e5e7eb;
 
   /* ACCENT */
   --accent: #0284c7;
 }
+
 /* Keep hero text readable in light theme */
 [data-theme="light"] .hero-content,
 [data-theme="light"] .hero-content h1,
