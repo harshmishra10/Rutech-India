@@ -138,14 +138,20 @@ body {
 
 /* NAV LINKS */
 
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px; /* controls spacing cleanly */
+}
+
 .header nav a {
-  margin-left: 45px;
   text-decoration: none;
   color: var(--text-nav);
   letter-spacing: 2px;
   font-size: 15px;
   text-transform: uppercase;
 }
+
 
 .header nav a:hover {
   color: var(--text-main);
@@ -374,10 +380,13 @@ body {
     gap: 12px;
   }
 
-  .header nav a {
-    margin-left: 20px;
-    font-size: 14px;
-  }
+.header nav {
+  gap: 16px; /* clean mobile spacing */
+}
+
+.header nav a {
+  font-size: 14px;
+}
 
   .logo-wrap img {
     height: 38px;
