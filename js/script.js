@@ -20,45 +20,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-   /* =====================
+/* =====================
    HERO TYPING EFFECT
 ===================== */
 
-const typingTarget = document.getElementById("typing-text");
+const typingEl = document.getElementById("typing-text");
 
-if (typingTarget) {
-  const textLines = [
-    "SOLVING PROBLEMS",
-    "OF CASTINGS"
-  ];
+if (typingEl) {
+  const text = typingEl.textContent;
+  typingEl.textContent = "";
+  let index = 0;
 
-  let lineIndex = 0;
-  let charIndex = 0;
-  let currentText = "";
-  let isDeleting = false;
-
-  function typeEffect() {
-    if (lineIndex < textLines.length) {
-      const fullText = textLines[lineIndex];
-
-      currentText = fullText.slice(0, charIndex + 1);
-      typingTarget.innerHTML =
-        currentText + (lineIndex === 0 ? "<br>" : "");
-
-      charIndex++;
-
-      if (charIndex === fullText.length) {
-        lineIndex++;
-        charIndex = 0;
-        setTimeout(typeEffect, 600); // pause between lines
-        return;
-      }
+  function type() {
+    if (index < text.length) {
+      typingEl.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 70);
     }
-    setTimeout(typeEffect, 60); // typing speed
   }
 
-  typeEffect();
+  // slight delay so hero loads first
+  setTimeout(type, 400);
 }
+typingEl.innerHTML = typingEl.textContent.replace(
+  "PROBLEMS ",
+  "PROBLEMS<br>"
+);
+
 
 
   /* =====================
