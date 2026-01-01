@@ -566,3 +566,72 @@ body {
     height: 260px;
   }
 }
+/* =====================
+   HEADER NAV LAYOUT FIX
+===================== */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 45px;
+}
+
+/* =====================
+   PROFESSIONAL THEME TOGGLE
+===================== */
+
+.theme-toggle {
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background: #1e293b;
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle .toggle-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #facc15; /* sun */
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+/* LIGHT MODE TOGGLE STATE */
+[data-theme="light"] .theme-toggle {
+  background: #cbd5f5;
+}
+
+[data-theme="light"] .theme-toggle .toggle-icon {
+  transform: translateX(20px);
+  background: #1e293b; /* moon */
+}
+
+/* =====================
+   SMOOTH THEME TRANSITION
+===================== */
+
+body,
+.header,
+.product-item,
+.client-card,
+.contact-cta,
+.certificate-box,
+input,
+textarea {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
