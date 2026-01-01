@@ -1,4 +1,22 @@
 /* =====================
+   THEME VARIABLES (PHASE 1 – DARK ONLY)
+   ⚠️ NO VISUAL CHANGE
+===================== */
+
+:root {
+  --bg-main: #000000;
+  --bg-header: #0b1f33;
+  --bg-deep: #020617;
+
+  --text-main: #ffffff;
+  --text-nav: #e5e7eb;
+  --text-muted: #9ca3af;
+  --text-soft: #d1d5db;
+
+  --accent: #38bdf8;
+}
+
+/* =====================
    RESET & BASE
 ===================== */
 
@@ -9,8 +27,8 @@
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: var(--bg-main);
+  color: var(--text-main);
   font-family: Arial, sans-serif;
 }
 
@@ -30,7 +48,7 @@ body {
 .header {
   position: relative;
   z-index: 10;
-  background: linear-gradient(to right, #0b1f33, #0e2a44);
+  background: linear-gradient(to right, var(--bg-header), #0e2a44);
   padding: 22px 40px;
   transition: padding 0.3s ease;
 }
@@ -72,14 +90,14 @@ body {
 .header nav a {
   margin-left: 45px;
   text-decoration: none;
-  color: #e5e7eb;
+  color: var(--text-nav);
   letter-spacing: 2px;
   font-size: 15px;
   text-transform: uppercase;
 }
 
 .header nav a:hover {
-  color: #fff;
+  color: var(--text-main);
 }
 
 /* =====================
@@ -123,7 +141,7 @@ body {
 }
 
 /* =====================
-   PRODUCTS PAGE (FIXED)
+   PRODUCTS PAGE
 ===================== */
 
 .products-page {
@@ -156,8 +174,8 @@ body {
   border-radius: 999px;
   border: none;
   outline: none;
-  background: #0b1f33;
-  color: #fff;
+  background: var(--bg-header);
+  color: var(--text-main);
   font-size: 16px;
 }
 
@@ -170,7 +188,7 @@ body {
 }
 
 .product-item {
-  background: linear-gradient(180deg, #0b1f33, #020617);
+  background: linear-gradient(180deg, var(--bg-header), var(--bg-deep));
   border-radius: 16px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -186,7 +204,7 @@ body {
   width: 100%;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--text-main);
   font-size: 18px;
   display: flex;
   justify-content: space-between;
@@ -209,7 +227,7 @@ body {
 .product-content p {
   padding: 20px 0;
   line-height: 1.7;
-  color: #d1d5db;
+  color: var(--text-soft);
 }
 
 .product-item.active .product-content {
@@ -242,7 +260,7 @@ body {
 }
 
 .contact-cta {
-  background: #0b1f33;
+  background: var(--bg-header);
   padding: 80px 40px;
   text-align: center;
 }
@@ -311,6 +329,7 @@ body {
     letter-spacing: 2px;
   }
 }
+
 /* =====================
    CONTACT PAGE
 ===================== */
@@ -332,11 +351,12 @@ body {
 
 .contact-subtitle {
   text-align: center;
-  color: #9ca3af;
+  color: var(--text-muted);
   margin-bottom: 60px;
 }
 
 /* GRID */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -344,6 +364,7 @@ body {
 }
 
 /* INFO */
+
 .contact-info h3 {
   font-size: 22px;
   margin-bottom: 20px;
@@ -356,10 +377,11 @@ body {
 
 .contact-note {
   margin-top: 25px;
-  color: #d1d5db;
+  color: var(--text-soft);
 }
 
 /* FORM */
+
 .contact-form h3 {
   font-size: 22px;
   margin-bottom: 20px;
@@ -377,8 +399,8 @@ body {
   border-radius: 8px;
   border: none;
   outline: none;
-  background: #0b1f33;
-  color: #fff;
+  background: var(--bg-header);
+  color: var(--text-main);
   font-size: 15px;
 }
 
@@ -391,8 +413,8 @@ body {
   padding: 14px;
   border-radius: 999px;
   border: none;
-  background: #38bdf8;
-  color: #020617;
+  background: var(--accent);
+  color: var(--bg-deep);
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -403,12 +425,6 @@ body {
   box-shadow: 0 0 18px rgba(56,189,248,0.4);
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
 /* =========================
    CLIENTS PAGE
 ========================= */
@@ -424,7 +440,7 @@ body {
 }
 
 .page-subtitle {
-  color: #9ca3af;
+  color: var(--text-muted);
   margin-bottom: 60px;
 }
 
@@ -441,11 +457,11 @@ body {
 .client-card {
   height: 120px;
   border-radius: 16px;
-  background: linear-gradient(180deg, #0b1f33, #020617);
+  background: linear-gradient(180deg, var(--bg-header), var(--bg-deep));
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9ca3af;
+  color: var(--text-muted);
   font-size: 14px;
   text-transform: uppercase;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -467,11 +483,11 @@ body {
   height: 380px;
   margin: 0 auto;
   border-radius: 18px;
-  background: #0b1f33;
+  background: var(--bg-header);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9ca3af;
+  color: var(--text-muted);
 }
 
 /* MOBILE */
@@ -481,4 +497,3 @@ body {
     height: 260px;
   }
 }
-
