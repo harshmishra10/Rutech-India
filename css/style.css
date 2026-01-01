@@ -1,4 +1,27 @@
 /* =====================
+   THEME VARIABLES
+===================== */
+
+:root {
+  --bg-main: #000000;
+  --bg-secondary: #0b1f33;
+  --bg-card: linear-gradient(180deg, #0b1f33, #020617);
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+  --accent: #38bdf8;
+}
+
+/* LIGHT THEME */
+[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-main: #020617;
+  --text-muted: #475569;
+  --accent: #0284c7;
+}
+
+/* =====================
    RESET & BASE
 ===================== */
 
@@ -9,9 +32,10 @@
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: var(--bg-main);
+  color: var(--text-main);
   font-family: Arial, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* =====================
@@ -30,9 +54,9 @@ body {
 .header {
   position: relative;
   z-index: 10;
-  background: linear-gradient(to right, #0b1f33, #0e2a44);
+  background: linear-gradient(to right, var(--bg-secondary), #0e2a44);
   padding: 22px 40px;
-  transition: padding 0.3s ease;
+  transition: padding 0.3s ease, background 0.3s ease;
 }
 
 .header.shrink {
@@ -72,14 +96,23 @@ body {
 .header nav a {
   margin-left: 45px;
   text-decoration: none;
-  color: #e5e7eb;
+  color: var(--text-main);
   letter-spacing: 2px;
   font-size: 15px;
   text-transform: uppercase;
 }
 
-.header nav a:hover {
-  color: #fff;
+/* THEME TOGGLE */
+
+.theme-toggle {
+  margin-left: 30px;
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 /* =====================
@@ -123,142 +156,74 @@ body {
 }
 
 /* =====================
-   PRODUCTS PAGE (FIXED)
+   CARDS / SECTIONS
 ===================== */
 
-.products-page {
+.client-card,
+.product-item,
+.contact-box,
+.contact-form,
+.certificate-box {
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+/* =====================
+   CLIENTS PAGE
+===================== */
+
+.clients-page {
   padding: 100px 20px;
-}
-
-.products-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.products-title {
   text-align: center;
-  font-size: clamp(32px, 4vw, 42px);
-  margin-bottom: 40px;
 }
 
-/* SEARCH BAR */
+.page-title {
+  font-size: clamp(34px, 4vw, 44px);
+  margin-bottom: 10px;
+}
 
-.product-search {
-  display: flex;
-  justify-content: center;
+.page-subtitle {
+  color: var(--text-muted);
   margin-bottom: 60px;
 }
 
-.product-search input {
-  width: 100%;
-  max-width: 520px;
-  padding: 14px 24px;
-  border-radius: 999px;
-  border: none;
-  outline: none;
-  background: #0b1f33;
-  color: #fff;
-  font-size: 16px;
+.clients-grid {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
 }
 
-/* ACCORDION */
-
-.products-accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.product-item {
-  background: linear-gradient(180deg, #0b1f33, #020617);
+.client-card {
+  height: 120px;
   border-radius: 16px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 18px rgba(56,189,248,0.25);
-}
-
-.product-header {
-  padding: 24px 28px;
-  width: 100%;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 18px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-}
-
-.product-header span {
-  font-size: 26px;
-  transition: transform 0.3s ease;
-}
-
-.product-content {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 28px;
-  transition: max-height 0.4s ease;
-}
-
-.product-content p {
-  padding: 20px 0;
-  line-height: 1.7;
-  color: #d1d5db;
-}
-
-.product-item.active .product-content {
-  max-height: 300px;
-}
-
-.product-item.active .product-header span {
-  transform: rotate(45deg);
+  justify-content: center;
+  text-transform: uppercase;
 }
 
 /* =====================
-   ABOUT + CTA
+   CONTACT PAGE
 ===================== */
 
-.about {
-  padding: 80px 40px;
-  max-width: 1100px;
-  margin: 0 auto;
+.contact-page {
+  padding: 100px 20px;
 }
 
-.about h2 {
+.contact-title {
   text-align: center;
-  margin-bottom: 30px;
+  font-size: clamp(32px, 4vw, 42px);
 }
 
-.about p {
-  text-align: justify;
-  line-height: 1.8;
-  margin-bottom: 18px;
-}
-
-.contact-cta {
-  background: #0b1f33;
-  padding: 80px 40px;
+.contact-subtitle {
   text-align: center;
-}
-
-.contact-cta h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.contact-cta p {
-  font-size: 18px;
-  opacity: 0.9;
+  color: var(--text-muted);
 }
 
 /* =====================
-   REVEAL ANIMATION
+   REVEAL
 ===================== */
 
 .reveal {
@@ -277,7 +242,6 @@ body {
 ===================== */
 
 @media (max-width: 768px) {
-
   .header {
     padding: 18px 20px;
   }
@@ -287,198 +251,7 @@ body {
     gap: 12px;
   }
 
-  .header nav a {
-    margin-left: 20px;
-    font-size: 14px;
-  }
-
-  .logo-wrap img {
-    height: 38px;
-  }
-
   .logo-text {
     font-size: 24px;
-    letter-spacing: 1.5px;
-  }
-
-  .hero-content {
-    margin: auto;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 38px;
-    letter-spacing: 2px;
   }
 }
-/* =====================
-   CONTACT PAGE
-===================== */
-
-.contact-page {
-  padding: 100px 20px;
-}
-
-.contact-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.contact-title {
-  text-align: center;
-  font-size: clamp(32px, 4vw, 42px);
-  margin-bottom: 10px;
-}
-
-.contact-subtitle {
-  text-align: center;
-  color: #9ca3af;
-  margin-bottom: 60px;
-}
-
-/* GRID */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
-/* INFO */
-.contact-info h3 {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-
-.contact-note {
-  margin-top: 25px;
-  color: #d1d5db;
-}
-
-/* FORM */
-.contact-form h3 {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 14px 16px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  background: #0b1f33;
-  color: #fff;
-  font-size: 15px;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form button {
-  margin-top: 10px;
-  padding: 14px;
-  border-radius: 999px;
-  border: none;
-  background: #38bdf8;
-  color: #020617;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-form button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 18px rgba(56,189,248,0.4);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* =========================
-   CLIENTS PAGE
-========================= */
-
-.clients-page {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.page-title {
-  font-size: clamp(34px, 4vw, 44px);
-  margin-bottom: 10px;
-}
-
-.page-subtitle {
-  color: #9ca3af;
-  margin-bottom: 60px;
-}
-
-/* CLIENT GRID */
-
-.clients-grid {
-  max-width: 1100px;
-  margin: 0 auto 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
-}
-
-.client-card {
-  height: 120px;
-  border-radius: 16px;
-  background: linear-gradient(180deg, #0b1f33, #020617);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9ca3af;
-  font-size: 14px;
-  text-transform: uppercase;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.client-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(56,189,248,0.35);
-}
-
-/* CERTIFICATE */
-
-.certificate-section h2 {
-  margin-bottom: 30px;
-}
-
-.certificate-box {
-  max-width: 720px;
-  height: 380px;
-  margin: 0 auto;
-  border-radius: 18px;
-  background: #0b1f33;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #9ca3af;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .certificate-box {
-    height: 260px;
-  }
-}
-
