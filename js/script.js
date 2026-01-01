@@ -67,30 +67,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* =====================
-     THEME TOGGLE
-  ===================== */
+ /* =====================
+   THEME TOGGLE (FINAL)
+===================== */
 
-  const toggleBtn = document.getElementById("themeToggle");
-  const root = document.documentElement;
+const toggleBtn = document.getElementById("themeToggle");
+const root = document.documentElement;
 
-  if (toggleBtn) {
-    const savedTheme = localStorage.getItem("theme");
+if (toggleBtn) {
+  const savedTheme = localStorage.getItem("theme");
 
-    if (savedTheme) {
-      root.setAttribute("data-theme", savedTheme);
-      toggleBtn.textContent = savedTheme === "light" ? "🌞" : "🌙";
-    }
-
-    toggleBtn.addEventListener("click", () => {
-      const currentTheme =
-        root.getAttribute("data-theme") === "light" ? "dark" : "light";
-
-      root.setAttribute("data-theme", currentTheme);
-      localStorage.setItem("theme", currentTheme);
-      toggleBtn.textContent = currentTheme === "light" ? "🌞" : "🌙";
-    });
+  // Apply saved theme on load
+  if (savedTheme === "light") {
+    root.setAttribute("data-theme", "light");
+    toggleBtn.textContent = "🌞";
+  } else {
+    root.removeAttribute("data-theme"); // default dark
+    toggleBtn.textContent = "🌙";
   }
+
+  // Toggle on click
+  toggleBtn.addEventListener("click", () => {
+    const isLight = root.getAttribute("data-theme") === "light";
+
+    if (isLight) {
+      // Switch to DARK (default)
+      root.removeAttribute("data-theme");
+      localStorage.setItem("theme", "dark");
+      toggleBtn.textContent = "🌙";
+    } else {
+      // Switch to LIGHT
+      root.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+      toggleBtn.textContent = "🌞";
+    }
+  });
+}
+
 
   /* =====================
      SCROLL EVENTS (ONE PLACE)
