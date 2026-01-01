@@ -634,4 +634,25 @@ textarea {
     color 0.25s ease,
     border-color 0.25s ease;
 }
+/* =====================
+   CONTACT FORM – LIGHT THEME FIX
+===================== */
+
+[data-theme="light"] .contact-form input,
+[data-theme="light"] .contact-form textarea {
+  background: #ffffff;
+  color: #020617;
+  border: 1px solid #cbd5e1;
+}
+
+[data-theme="light"] .contact-form input::placeholder,
+[data-theme="light"] .contact-form textarea::placeholder {
+  color: #64748b;
+}
+
+/* Keep dark theme untouched */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9ca3af;
+}
 
