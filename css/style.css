@@ -15,7 +15,23 @@
 
   --accent: #38bdf8;
 }
+/* =====================
+   LIGHT THEME (PHASE 2)
+   Hidden – no toggle yet
+===================== */
 
+[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-header: #ffffff;
+  --bg-deep: #e5e7eb;
+
+  --text-main: #020617;
+  --text-nav: #020617;
+  --text-muted: #475569;
+  --text-soft: #334155;
+
+  --accent: #0284c7;
+}
 /* =====================
    RESET & BASE
 ===================== */
