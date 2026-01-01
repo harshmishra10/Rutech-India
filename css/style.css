@@ -50,6 +50,14 @@
 [data-theme="light"] .header nav a:hover {
   color: #ffffff;
 }
+/* =====================
+   FOOTER / CTA TEXT FIX (LIGHT THEME)
+===================== */
+
+[data-theme="light"] .contact-cta,
+[data-theme="light"] .contact-cta * {
+  color: #e5e7eb;
+}
 
 
 /* Keep hero text readable in light theme */
