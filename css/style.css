@@ -80,7 +80,7 @@
 body {
   background: var(--bg-main);
   color: var(--text-main);
-  font-family: Arial, sans-serif;
+font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* =====================
