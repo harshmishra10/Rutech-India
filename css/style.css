@@ -655,4 +655,32 @@ textarea {
 .contact-form textarea::placeholder {
   color: #9ca3af;
 }
+/* =====================
+   CLIENTS PAGE – LIGHT THEME FIX
+===================== */
+
+/* Client cards */
+[data-theme="light"] .client-card {
+  background: #ffffff;
+  color: #020617;
+  border: 1px solid #cbd5e1;
+}
+
+/* Client card hover (still elegant, not flashy) */
+[data-theme="light"] .client-card:hover {
+  box-shadow: 0 0 18px rgba(2, 132, 199, 0.25);
+}
+
+/* Certificate box */
+[data-theme="light"] .certificate-box {
+  background: #ffffff;
+  color: #020617;
+  border: 1px solid #cbd5e1;
+}
+
+/* Subtitles under headings */
+[data-theme="light"] .page-subtitle {
+  color: #475569;
+}
+
 
