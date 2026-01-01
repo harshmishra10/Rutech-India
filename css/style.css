@@ -366,84 +366,96 @@ body {
 }
 
 /* =====================
-   MOBILE – HARD FIX
+   MOBILE – FINAL UX FIX
 ===================== */
 
 @media (max-width: 768px) {
 
-  /* ---------- HEADER ---------- */
+  /* ===== GLOBAL ===== */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER ===== */
 
   .header {
-    padding: 14px 14px;
+    padding: 14px 12px;
   }
 
   .header .nav {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .logo-wrap {
     justify-content: center;
   }
 
+  /* NAV LINKS – COMPACT & THUMB FRIENDLY */
   .header nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 14px;
+    flex-wrap: nowrap;
     width: 100%;
   }
 
   .header nav a {
     margin: 0;
-    font-size: 13px;
-    letter-spacing: 1.2px;
-    white-space: nowrap;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 6px 4px;
   }
 
-  /* Theme toggle */
+  /* THEME TOGGLE – CENTERED UNDER NAV */
   #themeToggle {
     margin-top: 6px;
+    align-self: center;
   }
 
-  /* ---------- HERO ---------- */
+  /* ===== HERO ===== */
 
   .hero-content {
     margin: auto;
     text-align: center;
-    padding: 0 12px;
+    padding: 0 14px;
     max-width: 100%;
   }
 
   .hero-content h1 {
-    font-size: 32px;
-    letter-spacing: 1.6px;
+    font-size: 30px;
+    letter-spacing: 1.5px;
   }
 
-  /* ---------- PRODUCTS ---------- */
+  /* ===== PRODUCTS ===== */
 
   .products-page {
-    padding: 70px 14px;
+    padding: 60px 14px;
   }
 
   .product-search input {
-    max-width: 100%;
+    width: 100%;
   }
 
   .product-item {
     width: 100%;
   }
 
-  /* ---------- CONTACT ---------- */
+  /* ===== CONTACT PAGE ===== */
 
-  .contact-grid {
-    grid-template-columns: 1fr;   /* THIS FIXES THE BREAK */
-    gap: 40px;
+  .contact-page {
+    padding: 70px 14px;
   }
 
-  .contact-form,
-  .contact-info {
+  .contact-grid {
+    display: flex;
+    flex-direction: column;   /* STACK, NOT GRID */
+    gap: 50px;
+  }
+
+  .contact-info,
+  .contact-form {
     width: 100%;
   }
 
@@ -452,13 +464,17 @@ body {
     width: 100%;
   }
 
-  /* ---------- CLIENTS ---------- */
+  .contact-form button {
+    width: 100%;
+  }
+
+  /* ===== CLIENTS ===== */
 
   .clients-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
-
 }
+
 
 
 /* =====================
