@@ -20,34 +20,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-/* =====================
-   HERO TYPING EFFECT
-===================== */
 
-const typingEl = document.getElementById("typing-text");
+  /* =====================
+     HERO TYPING EFFECT
+  ===================== */
 
-if (typingEl) {
-  const text = typingEl.textContent;
-  typingEl.textContent = "";
-  let index = 0;
+  const typingEl = document.getElementById("typing-text");
 
-  function type() {
-    if (index < text.length) {
-      typingEl.textContent += text.charAt(index);
-      index++;
-      setTimeout(type, 70);
+  if (typingEl) {
+    const fullText = typingEl.textContent.trim();
+    typingEl.textContent = "";
+    let index = 0;
+
+    function type() {
+      if (index < fullText.length) {
+        typingEl.textContent += fullText.charAt(index);
+        index++;
+        setTimeout(type, 70);
+      } else {
+        // Insert line break AFTER typing completes
+        typingEl.innerHTML = typingEl.textContent.replace(
+          "PROBLEMS ",
+          "PROBLEMS<br>"
+        );
+      }
     }
+
+    setTimeout(type, 400);
   }
-
-  // slight delay so hero loads first
-  setTimeout(type, 400);
-}
-typingEl.innerHTML = typingEl.textContent.replace(
-  "PROBLEMS ",
-  "PROBLEMS<br>"
-);
-
-
 
   /* =====================
      HEADER SHRINK
@@ -95,46 +95,41 @@ typingEl.innerHTML = typingEl.textContent.replace(
     });
   }
 
- /* =====================
-   THEME TOGGLE (FINAL)
-===================== */
+  /* =====================
+     THEME TOGGLE (FINAL)
+  ===================== */
 
-const toggleBtn = document.getElementById("themeToggle");
-const root = document.documentElement;
+  const toggleBtn = document.getElementById("themeToggle");
+  const root = document.documentElement;
 
-if (toggleBtn) {
-  const savedTheme = localStorage.getItem("theme");
+  if (toggleBtn) {
+    const savedTheme = localStorage.getItem("theme");
 
-  // Apply saved theme on load
-  if (savedTheme === "light") {
-    root.setAttribute("data-theme", "light");
-    toggleBtn.textContent = "🌞";
-  } else {
-    root.removeAttribute("data-theme"); // default dark
-    toggleBtn.textContent = "🌙";
+    if (savedTheme === "light") {
+      root.setAttribute("data-theme", "light");
+      toggleBtn.textContent = "🌞";
+    } else {
+      root.removeAttribute("data-theme");
+      toggleBtn.textContent = "🌙";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      const isLight = root.getAttribute("data-theme") === "light";
+
+      if (isLight) {
+        root.removeAttribute("data-theme");
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "🌙";
+      } else {
+        root.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌞";
+      }
+    });
   }
 
-  // Toggle on click
-  toggleBtn.addEventListener("click", () => {
-    const isLight = root.getAttribute("data-theme") === "light";
-
-    if (isLight) {
-      // Switch to DARK (default)
-      root.removeAttribute("data-theme");
-      localStorage.setItem("theme", "dark");
-      toggleBtn.textContent = "🌙";
-    } else {
-      // Switch to LIGHT
-      root.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-      toggleBtn.textContent = "🌞";
-    }
-  });
-}
-
-
   /* =====================
-     SCROLL EVENTS (ONE PLACE)
+     SCROLL EVENTS
   ===================== */
 
   window.addEventListener("scroll", () => {
