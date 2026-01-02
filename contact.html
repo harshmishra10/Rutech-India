@@ -73,14 +73,29 @@
       <div class="contact-form">
         <h3>Send Us a Message</h3>
 
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <input type="text" placeholder="Company / Foundry Name">
-          <textarea placeholder="Your Message" rows="5" required></textarea>
+<form 
+  action="https://docs.google.com/forms/d/e/1FAIpQLScsA_YqViN9O0RQCnCWOWOA_HcTVjRJ5LC7CSLmyLV8KWCgWw/formResponse"
+  method="POST"
+  target="hidden_iframe"
+  onsubmit="submitted=true;"
+>
 
-          <button type="submit">Send Message</button>
-        </form>
+  <input type="text" name="entry.570626741" placeholder="Your Name" required>
+
+  <input type="email" name="entry.313220179" placeholder="Your Email" required>
+
+  <input type="text" name="entry.122270084" placeholder="Company / Foundry Name">
+
+  <textarea name="entry.459565429" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+<p id="formSuccess" style="display:none; color:green; margin-top:15px; text-align:center;">
+  Thank you — your message has been sent!
+</p>
+
       </div>
 
     </div>
@@ -92,6 +107,7 @@
 <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
