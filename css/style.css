@@ -978,6 +978,37 @@ textarea {
     display: none !important;
   }
 }
+/* =====================
+   HERO – MOBILE IMAGE FALLBACK
+===================== */
+
+@media (max-width: 768px) {
+
+  /* Hide video on mobile */
+  .hero-visual video {
+    display: none;
+  }
+
+  /* Use image instead */
+  .hero-visual {
+    background: 
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url("images/cast-iron-melting.jpg") center / cover no-repeat;
+  }
+
+  /* Center text for mobile */
+  .hero-content {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+}
+
 
 
 
