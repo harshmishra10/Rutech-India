@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =====================
-     HERO TYPING EFFECT
+     HERO TYPING EFFECT (SMOOTH)
   ===================== */
 
   const typingEl = document.getElementById("typing-text");
@@ -36,9 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (index < fullText.length) {
         typingEl.textContent += fullText.charAt(index);
         index++;
-        setTimeout(type, 70);
+        setTimeout(type, 55); // smoother
       } else {
-        // Insert line break AFTER typing completes
         typingEl.innerHTML = typingEl.textContent.replace(
           "PROBLEMS ",
           "PROBLEMS<br>"
@@ -66,21 +65,40 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =====================
-     PRODUCT ACCORDION
-  ===================== */
+     PRODUCT ACCORDION (FIXED)
+     - Only one open at a time
+     - Icon state synced
+===================== */
 
-  document.querySelectorAll(".product-header").forEach(button => {
-    button.addEventListener("click", () => {
-      const item = button.closest(".product-item");
-      if (item) {
-        item.classList.toggle("active");
+  const productItems = document.querySelectorAll(".product-item");
+
+  productItems.forEach(item => {
+    const headerBtn = item.querySelector(".product-header");
+    const icon = headerBtn?.querySelector("span");
+
+    if (!headerBtn) return;
+
+    headerBtn.addEventListener("click", () => {
+      const isOpen = item.classList.contains("active");
+
+      // Close all
+      productItems.forEach(other => {
+        other.classList.remove("active");
+        const otherIcon = other.querySelector(".product-header span");
+        if (otherIcon) otherIcon.textContent = "+";
+      });
+
+      // Open current if it was closed
+      if (!isOpen) {
+        item.classList.add("active");
+        if (icon) icon.textContent = "×";
       }
     });
   });
 
   /* =====================
-     PRODUCT SEARCH
-  ===================== */
+     PRODUCT SEARCH (SAFE)
+===================== */
 
   const searchInput = document.getElementById("productSearch");
 
@@ -88,16 +106,25 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.addEventListener("input", () => {
       const value = searchInput.value.toLowerCase();
 
-      document.querySelectorAll(".product-item").forEach(item => {
+      productItems.forEach(item => {
         const text = item.innerText.toLowerCase();
-        item.style.display = text.includes(value) ? "block" : "none";
+        const match = text.includes(value);
+
+        item.style.display = match ? "block" : "none";
+
+        // Reset accordion state when filtering
+        if (!match) {
+          item.classList.remove("active");
+          const icon = item.querySelector(".product-header span");
+          if (icon) icon.textContent = "+";
+        }
       });
     });
   }
 
   /* =====================
      THEME TOGGLE (FINAL)
-  ===================== */
+===================== */
 
   const toggleBtn = document.getElementById("themeToggle");
   const root = document.documentElement;
@@ -107,10 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (savedTheme === "light") {
       root.setAttribute("data-theme", "light");
-      toggleBtn.textContent = "🌞";
     } else {
       root.removeAttribute("data-theme");
-      toggleBtn.textContent = "🌙";
     }
 
     toggleBtn.addEventListener("click", () => {
@@ -119,25 +144,23 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isLight) {
         root.removeAttribute("data-theme");
         localStorage.setItem("theme", "dark");
-        toggleBtn.textContent = "🌙";
       } else {
         root.setAttribute("data-theme", "light");
         localStorage.setItem("theme", "light");
-        toggleBtn.textContent = "🌞";
       }
     });
   }
 
   /* =====================
      SCROLL EVENTS
-  ===================== */
+===================== */
 
   window.addEventListener("scroll", () => {
     handleReveal();
     handleHeaderShrink();
   });
 
-  // Run once on load
+  // Initial run
   handleReveal();
   handleHeaderShrink();
 
