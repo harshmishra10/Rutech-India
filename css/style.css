@@ -989,10 +989,11 @@ textarea {
     display: none;
   }
 
-  /* Use image instead */
+ /* Use image instead */
   .hero-visual {
-    background: 
-      <img>("images/cast-iron-melting.jpg")</img> center / cover no-repeat;
+    background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url("../images/cast-iron-melting.jpg") center / cover no-repeat;
   }
 
   /* Center text for mobile */
