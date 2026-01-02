@@ -20,6 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+   /* =====================
+   MOBILE MENU TOGGLE
+===================== */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+    menuToggle.textContent = mainNav.classList.contains("active") ? "✕" : "☰";
+  });
+}
+
 
   /* =====================
      HERO TYPING EFFECT (SMOOTH)
