@@ -486,6 +486,23 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
 }
+@media (max-width: 768px) {
+
+  /* FORCE STACKING */
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* FULL WIDTH – NO SIDE BY SIDE */
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+}
+
 
 /* =====================
    DESKTOP SAFETY
