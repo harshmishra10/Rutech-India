@@ -872,5 +872,15 @@ textarea {
 [data-theme="light"] .product-content p {
   color: #334155;
 }
+/* =====================
+   MOBILE CONTACT FIX – FINAL
+   MUST BE LAST IN FILE
+===================== */
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
