@@ -992,7 +992,6 @@ textarea {
   /* Use image instead */
   .hero-visual {
     background: 
-      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
       <img>("images/cast-iron-melting.jpg")</img> center / cover no-repeat;
   }
 
@@ -1000,7 +999,7 @@ textarea {
   .hero-content {
     margin: 0 auto;
     text-align: left;
-    padding: 20px 20px;
+    padding: 0px 20px;
   }
 
   .hero-content h1 {
