@@ -721,13 +721,6 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   display: block;
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .certificate-box {
-    height: 260px;
-  }
-}
 /* =====================
    HEADER NAV LAYOUT FIX
 ===================== */
