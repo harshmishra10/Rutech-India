@@ -391,7 +391,7 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* =====================
-   MOBILE – FINAL UX FIX
+   MOBILE – PROFESSIONAL UX (FINAL)
 ===================== */
 
 @media (max-width: 768px) {
@@ -401,52 +401,92 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     overflow-x: hidden;
   }
 
-  /* ===== HEADER ===== */
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* =====================
+     HEADER & NAV (FIXED)
+  ===================== */
 
   .header {
-    padding: 14px 12px;
+    padding: 14px 0;
   }
 
   .header .nav {
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row; /* 🔑 CRITICAL */
+  }
+
+  /* LOGO */
+  .logo-wrap {
+    display: flex;
     align-items: center;
     gap: 8px;
   }
 
-   .logo-text {
-  font-family: 'Noto Serif', serif;
-  font-size: 26px;
-  letter-spacing: 1.2px;
-}
-
-
-  .logo-wrap {
-    justify-content: center;
+  .logo-wrap img {
+    height: 36px;
   }
 
-  /* NAV LINKS – COMPACT & THUMB FRIENDLY */
-  .header nav {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-
-  .header nav a {
-    margin: 0;
-    font-size: 12px;
+  .logo-text {
+    font-size: 22px;
     letter-spacing: 1px;
-    padding: 6px 4px;
   }
 
-  /* THEME TOGGLE – CENTERED UNDER NAV */
+  /* HAMBURGER BUTTON */
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--text-nav);
+    cursor: pointer;
+  }
+
+  /* NAV PANEL (DROPDOWN) */
+  .main-nav {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, var(--bg-header), var(--bg-deep));
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 0;
+    z-index: 999;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  /* NAV LINKS */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 16px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 6px 0;
+  }
+
+  /* THEME TOGGLE */
   #themeToggle {
-    margin-top: 6px;
-    align-self: center;
+    margin-top: 8px;
   }
 
-  /* ===== HERO ===== */
+  /* =====================
+     HERO
+  ===================== */
 
   .hero-content {
     margin: auto;
@@ -460,7 +500,9 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     letter-spacing: 1.5px;
   }
 
-  /* ===== PRODUCTS ===== */
+  /* =====================
+     PRODUCTS
+  ===================== */
 
   .products-page {
     padding: 60px 14px;
@@ -474,7 +516,9 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     width: 100%;
   }
 
-  /* ===== CONTACT PAGE ===== */
+  /* =====================
+     CONTACT PAGE
+  ===================== */
 
   .contact-page {
     padding: 70px 14px;
@@ -482,8 +526,8 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   .contact-grid {
     display: flex;
-    flex-direction: column;   /* STACK, NOT GRID */
-    gap: 50px;
+    flex-direction: column;
+    gap: 40px;
   }
 
   .contact-info,
@@ -500,14 +544,24 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     width: 100%;
   }
 
-  /* ===== CLIENTS ===== */
+  /* =====================
+     CLIENTS
+  ===================== */
 
   .clients-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 }
 
+/* =====================
+   DESKTOP SAFETY
+===================== */
 
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
 
 /* =====================
    CONTACT PAGE
