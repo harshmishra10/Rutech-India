@@ -153,6 +153,7 @@ if (menuToggle && mainNav) {
     });
   }
 
+
   /* =====================
      THEME TOGGLE (FINAL)
 ===================== */
@@ -181,6 +182,15 @@ if (menuToggle && mainNav) {
       }
     });
   }
+   let submitted = false;
+
+document.querySelector("form")?.addEventListener("submit", () => {
+  setTimeout(() => {
+    const success = document.getElementById("formSuccess");
+    if (success) success.style.display = "block";
+  }, 700);
+});
+
 
   /* =====================
      SCROLL EVENTS
