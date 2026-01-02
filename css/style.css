@@ -391,36 +391,28 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* =====================
-   MOBILE – PROFESSIONAL UX (FINAL)
-===================== */
-/* =====================
-   MOBILE – NAV FIX (FINAL)
+   MOBILE – FINAL FIX
 ===================== */
 
 @media (max-width: 768px) {
 
+  /* ===== GLOBAL SAFETY ===== */
   body {
     overflow-x: hidden;
   }
 
-  /* ===== HEADER BAR ===== */
+  /* =====================
+     HEADER
+  ===================== */
 
   .header {
-    padding: 14px 0;
-    position: relative;
+    padding: 14px 16px;
   }
 
   .header .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  /* LOGO */
-  .logo-wrap {
-    display: flex;
-    align-items: center;
-    gap: 8px;
   }
 
   .logo-wrap img {
@@ -432,7 +424,6 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     letter-spacing: 1px;
   }
 
-  /* HAMBURGER */
   .menu-toggle {
     display: block;
     font-size: 28px;
@@ -443,7 +434,9 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     z-index: 1001;
   }
 
-  /* ===== MOBILE MENU (CLOSED BY DEFAULT) ===== */
+  /* =====================
+     MOBILE NAV MENU
+  ===================== */
 
   .main-nav {
     position: fixed;
@@ -457,17 +450,14 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     align-items: center;
     justify-content: center;
     gap: 28px;
-
     transform: translateY(-100%);
     transition: transform 0.35s ease;
   }
 
-  /* OPEN STATE */
   .main-nav.active {
     transform: translateY(0);
   }
 
-  /* NAV LINKS */
   .nav-links {
     display: flex;
     flex-direction: column;
@@ -480,27 +470,41 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     letter-spacing: 3px;
   }
 
-  /* THEME TOGGLE */
   #themeToggle {
     margin-top: 30px;
   }
 
-}
-@media (max-width: 768px) {
+  /* =====================
+     CONTACT PAGE – THE FIX
+  ===================== */
 
-  /* FORCE STACKING */
-  .contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  /* 🔴 THIS WAS MISSING BEFORE */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px;
   }
 
-  /* FULL WIDTH – NO SIDE BY SIDE */
   .contact-info,
   .contact-form {
     width: 100%;
   }
 
+  .contact-info h3,
+  .contact-form h3 {
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 24px 20px;
+  }
+
+  /* =====================
+     CERTIFICATE SAFETY
+  ===================== */
+
+  .certificate-box {
+    height: 260px;
+  }
 }
 
 
