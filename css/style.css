@@ -898,5 +898,14 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+/* =====================
+   CLIENT LOGOS – SAME BACKGROUND IN BOTH THEMES
+===================== */
+
+[data-theme="light"] .client-card {
+  background: linear-gradient(180deg, var(--bg-header), var(--bg-deep));
+  border: none;
+}
+
 
 
