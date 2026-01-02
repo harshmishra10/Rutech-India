@@ -257,7 +257,9 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
 }
 
-/* ACCORDION */
+/* =====================
+   PRODUCTS – ACCORDION (FIXED)
+===================== */
 
 .products-accordion {
   display: flex;
@@ -295,26 +297,46 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   transition: transform 0.3s ease;
 }
 
+/* CONTENT – COLLAPSED STATE */
 .product-content {
   max-height: 0;
   overflow: hidden;
   padding: 0 28px;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.45s ease, padding 0.3s ease;
 }
 
+/* CONTENT – EXPANDED STATE */
+.product-item.active .product-content {
+  max-height: 460px;          /* ⬅ expands properly */
+  padding: 20px 28px 28px;   /* ⬅ padding only when open */
+  overflow-y: auto;          /* ⬅ scrollbar when needed */
+}
+
+/* TEXT */
 .product-content p {
-  padding: 20px 0;
   line-height: 1.7;
   color: var(--text-soft);
 }
 
-.product-item.active .product-content {
-  max-height: 300px;
-}
-
+/* ICON ROTATION */
 .product-item.active .product-header span {
   transform: rotate(45deg);
 }
+
+/* SCROLLBAR – PROFESSIONAL */
+.product-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.product-content::-webkit-scrollbar-thumb {
+  background: rgba(56,189,248,0.6);
+  border-radius: 10px;
+}
+
+.product-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 
 /* =====================
    ABOUT + CTA
