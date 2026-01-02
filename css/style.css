@@ -467,15 +467,7 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     visibility: visible;
     pointer-events: auto;
   }
-
-}
-
-  .main-nav.active {
-    transform: translateY(0);
-  }
-
-  .nav-links {
-    display: flex;
+     .nav-links {
     flex-direction: column;
     gap: 28px;
     text-align: center;
@@ -489,6 +481,10 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   #themeToggle {
     margin-top: 30px;
   }
+
+}
+
+
 
   /* =====================
      CONTACT PAGE – THE FIX
