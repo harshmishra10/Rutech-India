@@ -484,6 +484,35 @@ font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
 }
 
+/* =====================
+   MOBILE HERO TEXT FIX
+===================== */
+
+@media (max-width: 768px) {
+
+  .hero-content,
+  .hero-text,
+  .hero-inner {
+    max-width: 92%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .hero h1,
+  .hero-title {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero p,
+  .hero-quote {
+    text-align: left;
+    max-width: 85%;
+    line-height: 1.6;
+  }
+
+}
 
 
   /* =====================
