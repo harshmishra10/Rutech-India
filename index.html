@@ -1,25 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Rutech India | Foundry Fluxes & Chemical Solutions Since 1998</title>
+  <meta name="title" content="Rutech India | Foundry Fluxes & Chemical Solutions Since 1998">
+  <meta name="description" content="Rutech India manufactures foundry fluxes and specialty chemicals to solve casting defects and improve metal quality for foundries across India. Exothermic sleeves, hot tops, washes & more.">
+  <meta name="keywords" content="foundry fluxes, exothermic sleeves, hot tops, foundry chemicals, casting solutions, Bhilai, Rutech India, riser sleeves, foundry washes">
+  <meta name="author" content="Rutech India">
+  <meta name="robots" content="index, follow">
 
-  <title>Rutech India | Foundry Fluxes & Chemical Solutions</title>
-  <meta name="description" content="Rutech India manufactures foundry fluxes and specialty chemicals to solve casting defects and improve metal quality for foundries across India.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rutechindia.in/">
+  <meta property="og:title" content="Rutech India | Foundry Fluxes & Chemical Solutions">
+  <meta property="og:description" content="Leading manufacturer of feeding aids for foundries. Quality products since 1998.">
+  <meta property="og:image" content="https://rutechindia.in/images/logo.png">
 
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://rutechindia.in/">
+  <meta property="twitter:title" content="Rutech India | Foundry Fluxes & Chemical Solutions">
+  <meta property="twitter:description" content="Leading manufacturer of feeding aids for foundries. Quality products since 1998.">
+  <meta property="twitter:image" content="https://rutechindia.in/images/logo.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://rutechindia.in/">
+
+  <!-- Favicon (User should add their favicon) -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Rutech India",
+    "description": "Manufacturer of foundry fluxes and specialty chemicals",
+    "url": "https://rutechindia.in",
+    "logo": "https://rutechindia.in/images/logo.png",
+    "foundingDate": "1998",
+    "founder": {
+      "@type": "Person",
+      "name": "Shri N. R. Misra"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "15-F, Heavy Industrial Area, Hathkhoj",
+      "addressLocality": "Bhilai",
+      "addressRegion": "Chhattisgarh",
+      "postalCode": "490020",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-7000139818",
+      "contactType": "Customer Service",
+      "email": "rutechindiaclient@gmail.com"
+    },
+    "sameAs": [
+      "https://www.facebook.com/rutechindia",
+      "https://www.linkedin.com/company/rutechindia"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
+<!-- Header -->
 <header class="header">
   <div class="container nav">
 
     <div class="logo-wrap">
-      <img src="images/logo.png" alt="Rutech India Logo">
+      <img src="images/logo.png" alt="Rutech India Logo" width="50" height="50">
       <span class="logo-text">Rutech India</span>
     </div>
 
@@ -30,10 +95,10 @@
 
     <nav class="main-nav">
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="clients.html">Clients</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="active" data-testid="nav-home">Home</a>
+        <a href="products.html" data-testid="nav-products">Products</a>
+        <a href="clients.html" data-testid="nav-clients">Clients</a>
+        <a href="contact.html" data-testid="nav-contact">Contact</a>
       </div>
 
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
@@ -44,10 +109,7 @@
   </div>
 </header>
 
-<!-- =====================
-     HERO WITH VIDEO
-===================== -->
-
+<!-- Hero Section with Video -->
 <section class="hero-visual">
 
   <!-- Background Video -->
@@ -58,9 +120,9 @@
     loop
     playsinline
     preload="auto"
+    aria-label="Foundry operations background video"
   >
     <source src="Videos/Foundry.mp4" type="video/mp4">
-    <!-- Fallback text -->
     Your browser does not support the video tag.
   </video>
 
@@ -69,25 +131,27 @@
 
   <!-- Hero Content -->
   <div class="hero-content">
-    <h1 id="typing-text">SOLVING PROBLEMS OF CASTINGS</h1>
+    <h1 id="typing-text" data-testid="hero-title">SOLVING PROBLEMS OF CASTINGS</h1>
 
     <p class="hero-quote">
       There is no such problem without gifts for you in its hands.<br>
       We seek problems because we need their gifts.
     </p>
+
+    <div class="hero-cta">
+      <a href="products.html" class="btn btn-primary" data-testid="explore-products-btn">Explore Products</a>
+      <a href="contact.html" class="btn btn-secondary" data-testid="contact-us-btn">Contact Us</a>
+    </div>
   </div>
 
 </section>
 
-<!-- =====================
-     ABOUT
-===================== -->
-
+<!-- About Section -->
 <section class="about reveal">
-  <h2>About Rutech India</h2>
+  <h2 data-testid="about-title">About Rutech India</h2>
 
   <p>
-    Founded in 1998 by Shri N. R. Misra, <strong>RUTECH INDIA</strong> is one of the leading manufacturers of feeding aids (Foundry Fluxes and Chemicals) for Foundries (Ferrous &amp; Non-Ferrous).
+    Founded in 1998 by Shri N. R. Misra, <strong>RUTECH INDIA</strong> is one of the leading manufacturers of feeding aids (Foundry Fluxes and Chemicals) for Foundries (Ferrous & Non-Ferrous).
   </p>
 
   <p>
@@ -110,16 +174,119 @@
   </p>
 </section>
 
-<!-- =====================
-     CTA
-===================== -->
+<!-- Why Choose Us Section -->
+<section class="features reveal" data-testid="features-section">
+  <h2>Why Choose Rutech India?</h2>
+  
+  <div class="features-grid">
+    <div class="feature-card" data-testid="feature-quality">
+      <div class="feature-icon">✓</div>
+      <h3>Quality Assured</h3>
+      <p>Advanced production techniques with comprehensive laboratory testing ensure consistent, high-quality products.</p>
+    </div>
 
+    <div class="feature-card" data-testid="feature-experience">
+      <div class="feature-icon">★</div>
+      <h3>25+ Years Experience</h3>
+      <p>Over two decades of expertise in foundry solutions and casting problem resolution.</p>
+    </div>
+
+    <div class="feature-card" data-testid="feature-support">
+      <div class="feature-icon">◆</div>
+      <h3>On-Site Trials</h3>
+      <p>We conduct trials at your workshop to ensure optimal results for your specific requirements.</p>
+    </div>
+
+    <div class="feature-card" data-testid="feature-range">
+      <div class="feature-icon">●</div>
+      <h3>Wide Product Range</h3>
+      <p>Comprehensive range of exothermic sleeves, hot tops, fluxes, and foundry washes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
 <section class="contact-cta">
-  <h2>Let’s Solve Your Casting Problems</h2>
-  <p>Email: rutechindiaclient@gmail.com | Phone: +91-7000139818 , +91-9826518369</p>
+  <h2 data-testid="cta-title">Let's Solve Your Casting Problems</h2>
+  <p>Email: <a href="mailto:rutechindiaclient@gmail.com" data-testid="cta-email">rutechindiaclient@gmail.com</a></p>
+  <p>Phone: <a href="tel:+917000139818" data-testid="cta-phone1">+91-7000139818</a> | <a href="tel:+919826518369" data-testid="cta-phone2">+91-9826518369</a></p>
   <p>Factory: 15-F, Heavy Industrial Area, Hathkhoj, Bhilai (C.G.)</p>
   <p>Office: D-52, Duplex, Chauhan Town, Junwani Road, Bhilai (C.G.) – 490020</p>
+  
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn btn-primary" data-testid="get-in-touch-btn">Get In Touch</a>
+  </div>
 </section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-column">
+        <h3>Rutech India</h3>
+        <p>Leading manufacturer of foundry fluxes and specialty chemicals since 1998.</p>
+        <p class="footer-tagline">"Solving Problems of Castings"</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html" data-testid="footer-home">Home</a></li>
+          <li><a href="products.html" data-testid="footer-products">Products</a></li>
+          <li><a href="clients.html" data-testid="footer-clients">Clients</a></li>
+          <li><a href="contact.html" data-testid="footer-contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="mailto:rutechindiaclient@gmail.com">rutechindiaclient@gmail.com</a></li>
+          <li><a href="tel:+917000139818">+91-7000139818</a></li>
+          <li><a href="tel:+919826518369">+91-9826518369</a></li>
+          <li>Bhilai, Chhattisgarh</li>
+        </ul>
+      </div>
+
+      <!-- Social Links -->
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" data-testid="social-facebook" title="Facebook">f</a>
+          <a href="#" aria-label="LinkedIn" data-testid="social-linkedin" title="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter" data-testid="social-twitter" title="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram" data-testid="social-instagram" title="Instagram">IG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 1998-2025 Rutech India. All Rights Reserved.</p>
+      <p>Designed with excellence for foundry solutions.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917000139818?text=Hello%20Rutech%20India,%20I'm%20interested%20in%20your%20foundry%20products" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp"
+   data-testid="whatsapp-button">
+  <span class="whatsapp-icon">💬</span>
+</a>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top" data-testid="back-to-top">
+  ↑
+</button>
 
 <script src="js/script.js"></script>
 </body>
