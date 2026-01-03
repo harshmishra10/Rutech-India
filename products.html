@@ -1,38 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Products | Rutech India - Foundry Fluxes & Chemicals</title>
+  <meta name="title" content="Products | Rutech India - Foundry Fluxes & Chemicals">
+  <meta name="description" content="Rutech India product range including exothermic sleeves, hot tops, fluxes, and foundry washes. High-quality feeding aids for ferrous and non-ferrous foundries.">
+  <meta name="keywords" content="exothermic sleeves, hot tops, foundry fluxes, foundry washes, riser sleeves, insulating sleeves, COVEREXO-S, ZIR Aqua">
+  <meta name="robots" content="index, follow">
 
-  <title>Products | Rutech India</title>
-  <meta name="description" content="Rutech India product range including exothermic sleeves, hot tops, fluxes, and foundry washes.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rutechindia.in/products.html">
+  <meta property="og:title" content="Products | Rutech India">
+  <meta property="og:description" content="Comprehensive range of foundry products - exothermic sleeves, hot tops, fluxes, and washes.">
 
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://rutechindia.in/products.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- Header -->
 <header class="header">
   <div class="container nav">
 
     <div class="logo-wrap">
-      <img src="images/logo.png" alt="Rutech India Logo">
+      <img src="images/logo.png" alt="Rutech India Logo" width="50" height="50">
       <span class="logo-text">Rutech India</span>
     </div>
 
-    <!-- HAMBURGER BUTTON (MOBILE ONLY) -->
-<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-  ☰
-</button>
-
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
 
     <nav class="main-nav">
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="clients.html">Clients</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-testid="nav-home">Home</a>
+        <a href="products.html" class="active" data-testid="nav-products">Products</a>
+        <a href="clients.html" data-testid="nav-clients">Clients</a>
+        <a href="contact.html" data-testid="nav-contact">Contact</a>
       </div>
 
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
@@ -47,16 +67,16 @@
 <section class="products-page">
   <div class="products-container">
 
-    <h1 class="products-title">Our Products</h1>
+    <h1 class="products-title" data-testid="products-title">Our Products</h1>
 
     <div class="product-search">
-      <input type="text" id="productSearch" placeholder="Search products...">
+      <input type="text" id="productSearch" placeholder="Search products..." aria-label="Search products" data-testid="product-search">
     </div>
 
     <div class="products-accordion">
 
-      <div class="product-item">
-        <button class="product-header">
+      <div class="product-item" data-testid="product-exothermic-sleeves">
+        <button class="product-header" aria-expanded="false">
           Exothermic Sleeves (Riser E) & Insulating Sleeves (Riser I)
           <span>+</span>
         </button>
@@ -96,30 +116,30 @@
 
 <ol>
   <li>
-    <strong>Cylindrical (Open &amp; Blind)</strong> sizes varying from
-    1"-26" (Inner Diameter) &amp; 2"-8" (Height).
+    <strong>Cylindrical (Open & Blind)</strong> sizes varying from
+    1"-26" (Inner Diameter) & 2"-8" (Height).
   </li>
 
   <li>
     <strong>Oval sizes</strong>
     <ol type="a">
       <li>
-        3" X 4" X 6" height (open &amp; blind)<br>
-        3" X 5" X 6" height (open &amp; blind)<br>
-        3" X 5" X 11" height (open &amp; blind)
+        3" X 4" X 6" height (open & blind)<br>
+        3" X 5" X 6" height (open & blind)<br>
+        3" X 5" X 11" height (open & blind)
       </li>
 
       <li>
-        4" X 6" X 6" (open &amp; blind)<br>
-        4" X 8" X 8" (open &amp; blind)
+        4" X 6" X 6" (open & blind)<br>
+        4" X 8" X 8" (open & blind)
       </li>
 
-      <li>5" X 10" X 6" (open &amp; blind)</li>
-      <li>6" X 12" X 6" (open &amp; blind)</li>
-      <li>7" X 14" X 6" (open &amp; blind)</li>
-      <li>8" X 16" X 6" (open &amp; blind)</li>
-      <li>9" X 18" X 6" (open &amp; blind)</li>
-      <li>10" X 20" X 6" (open &amp; blind)</li>
+      <li>5" X 10" X 6" (open & blind)</li>
+      <li>6" X 12" X 6" (open & blind)</li>
+      <li>7" X 14" X 6" (open & blind)</li>
+      <li>8" X 16" X 6" (open & blind)</li>
+      <li>9" X 18" X 6" (open & blind)</li>
+      <li>10" X 20" X 6" (open & blind)</li>
       <li>11" X 22" X 6" (open)</li>
       <li>12" X 24" X 6" (open)</li>
       <li>14" X 28" X 6" (open)</li>
@@ -145,15 +165,15 @@
         </div>
       </div>
 
-      <div class="product-item">
-        <button class="product-header">
+      <div class="product-item" data-testid="product-hot-tops">
+        <button class="product-header" aria-expanded="false">
           Hot Tops (RI Tops)
           <span>+</span>
         </button>
         <div class="product-content">
          <p>
-  Wide Range of Hot Tops for small, medium &amp; large Ingots are manufactured as
-  <strong>Super Imposed</strong>, <strong>Semi Inserted</strong> &amp;
+  Wide Range of Hot Tops for small, medium & large Ingots are manufactured as
+  <strong>Super Imposed</strong>, <strong>Semi Inserted</strong> &
   <strong>Full Inserted</strong> in following designs :
   <em>(Dimensions as per Mould Design)</em>
 </p>
@@ -192,14 +212,14 @@
         </div>
       </div>
 
-      <div class="product-item">
-        <button class="product-header">
+      <div class="product-item" data-testid="product-fluxes">
+        <button class="product-header" aria-expanded="false">
           Fluxes
           <span>+</span>
         </button>
         <div class="product-content"><p>
-  Fluxes play a very important role in Iron &amp; Steel Industries. The fluxes are produced
-  to match the requirements of the iron &amp; steel industry to obtain maximum benefits.
+  Fluxes play a very important role in Iron & Steel Industries. The fluxes are produced
+  to match the requirements of the iron & steel industry to obtain maximum benefits.
 </p>
 
 <p>
@@ -250,8 +270,8 @@
         </div>
       </div>
 
-      <div class="product-item">
-        <button class="product-header">
+      <div class="product-item" data-testid="product-washes">
+        <button class="product-header" aria-expanded="false">
           Washes (Water Based & Thinner Based)
           <span>+</span>
         </button>
@@ -270,13 +290,13 @@
   <li>
     <strong>Cera Aqua</strong> <em>(ready to use)</em> is an economical wash recommended for small
     metal castings. The principal refractory contained in these coatings is a mixed refractory of
-    zircon, sillimanite &amp; alumina.
+    zircon, sillimanite & alumina.
   </li>
 
   <li>
-    <strong>Grapho Zir Aqua</strong> <em>(paste form)</em> is recommended for S.G. Iron &amp; Grey
+    <strong>Grapho Zir Aqua</strong> <em>(paste form)</em> is recommended for S.G. Iron & Grey
     Cast Iron heavy-section mould castings. The principal refractory contained in these coatings
-    is a mixed refractory of zircon &amp; graphite.
+    is a mixed refractory of zircon & graphite.
   </li>
 
   <li>
@@ -344,9 +364,9 @@
 
 <ol type="A" start="3">
   <li>
-    <strong>Grapho Zir Flash</strong> <em>(paste form)</em> is recommended for S.G. Iron &amp; Grey
+    <strong>Grapho Zir Flash</strong> <em>(paste form)</em> is recommended for S.G. Iron & Grey
     Cast Iron heavy-section mould castings. The principal refractory contained in these coatings
-    is a mixed refractory of zircon &amp; graphite.
+    is a mixed refractory of zircon & graphite.
   </li>
 
   <li>
@@ -363,20 +383,71 @@
   </div>
 </section>
 
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h3>Rutech India</h3>
+        <p>Leading manufacturer of foundry fluxes and specialty chemicals since 1998.</p>
+        <p class="footer-tagline">"Solving Problems of Castings"</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html" data-testid="footer-home">Home</a></li>
+          <li><a href="products.html" data-testid="footer-products">Products</a></li>
+          <li><a href="clients.html" data-testid="footer-clients">Clients</a></li>
+          <li><a href="contact.html" data-testid="footer-contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="mailto:rutechindiaclient@gmail.com">rutechindiaclient@gmail.com</a></li>
+          <li><a href="tel:+917000139818">+91-7000139818</a></li>
+          <li><a href="tel:+919826518369">+91-9826518369</a></li>
+          <li>Bhilai, Chhattisgarh</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" data-testid="social-facebook" title="Facebook">f</a>
+          <a href="#" aria-label="LinkedIn" data-testid="social-linkedin" title="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter" data-testid="social-twitter" title="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram" data-testid="social-instagram" title="Instagram">IG</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 1998-2025 Rutech India. All Rights Reserved.</p>
+      <p>Designed with excellence for foundry solutions.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917000139818?text=Hello%20Rutech%20India,%20I'm%20interested%20in%20your%20foundry%20products" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp"
+   data-testid="whatsapp-button">
+  <span class="whatsapp-icon">💬</span>
+</a>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top" data-testid="back-to-top">
+  ↑
+</button>
 
 <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
