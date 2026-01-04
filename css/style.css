@@ -218,87 +218,62 @@ body {
 ===================== */
 
 .theme-toggle {
-  width: 44px;
-  height: 24px;
+  position: relative;
+  width: 64px;
+  height: 30px;
   border-radius: 999px;
   background: #1e293b;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255,255,255,0.25);
   cursor: pointer;
-  position: relative;
-  transition: background 0.3s ease;
-  margin-left: 30px;
-}
-
-.theme-toggle .toggle-icon {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #facc15;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  transition: transform 0.35s ease, background 0.35s ease;
-}
-
-[data-theme="light"] .theme-toggle {
-  background: #cbd5f5;
-}
-
-[data-theme="light"] .theme-toggle .toggle-icon {
-  transform: translateX(20px);
-  background: #1e293b;
-}
-
-.theme-toggle:hover {
-  transform: scale(1.05);
-}
-.theme-toggle {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6px;
+  padding: 0 9px;
 }
 
-/* ICON BASE */
-.theme-icon {
-  width: 12px;
-  height: 12px;
-  pointer-events: none;
-  opacity: 0.6;
+.theme-toggle .icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 2;
+  z-index: 2;
+  transition: opacity 0.25s ease;
 }
 
-/* MOON (dark mode cue) */
-.theme-icon.moon::before {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #e5e7eb;
-  border-radius: 50%;
-  clip-path: inset(0 0 0 50%);
-}
-
-/* SUN (light mode cue) */
-.theme-icon.sun::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border: 2px solid #020617;
-  border-radius: 50%;
-}
-
-/* Show correct icon per theme */
-.theme-icon.sun {
+.theme-toggle .sun {
   opacity: 0;
 }
 
-[data-theme="light"] .theme-icon.sun {
-  opacity: 0.7;
+.theme-toggle .toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  border-radius: 50%;
+  transition: transform 0.35s ease;
+  z-index: 1;
 }
 
-[data-theme="light"] .theme-icon.moon {
+/* LIGHT MODE */
+[data-theme="light"] .theme-toggle {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .theme-toggle .toggle-knob {
+  transform: translateX(34px);
+}
+
+[data-theme="light"] .theme-toggle .moon {
   opacity: 0;
+}
+
+[data-theme="light"] .theme-toggle .sun {
+  opacity: 1;
+  stroke: #020617;
 }
 
 
