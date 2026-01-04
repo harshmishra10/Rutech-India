@@ -217,10 +217,14 @@ body {
    THEME TOGGLE BUTTON
 ===================== */
 
+/* =====================
+   THEME TOGGLE – FIXED
+===================== */
+
 .theme-toggle {
   position: relative;
-  width: 64px;
-  height: 30px;
+  width: 40px;              /* reduced */
+  height: 22px;
   border-radius: 999px;
   background: #1e293b;
   border: 1px solid rgba(255,255,255,0.25);
@@ -228,33 +232,43 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 9px;
+  padding: 0 6px;           /* tighter padding */
 }
 
+/* ICONS (OPTICALLY CENTERED) */
 .theme-toggle .icon {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   fill: none;
   stroke: #e5e7eb;
   stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   z-index: 2;
   transition: opacity 0.25s ease;
 }
 
+/* Hide sun by default (dark mode) */
 .theme-toggle .sun {
   opacity: 0;
 }
 
+/* KNOB */
 .theme-toggle .toggle-knob {
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 24px;
-  height: 24px;
+  top: 2px;
+  left: 2px;
+  width: 18px;              /* proportional to track */
+  height: 18px;
   background: var(--accent);
   border-radius: 50%;
-  transition: transform 0.35s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
   z-index: 1;
+
+  /* perfect centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* LIGHT MODE */
@@ -264,7 +278,8 @@ body {
 }
 
 [data-theme="light"] .theme-toggle .toggle-knob {
-  transform: translateX(34px);
+  transform: translateX(18px);   /* exact math: 40 - 18 - 4 */
+  background: #1e293b;
 }
 
 [data-theme="light"] .theme-toggle .moon {
