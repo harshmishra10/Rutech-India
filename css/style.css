@@ -252,6 +252,55 @@ body {
 .theme-toggle:hover {
   transform: scale(1.05);
 }
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+}
+
+/* ICON BASE */
+.theme-icon {
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* MOON (dark mode cue) */
+.theme-icon.moon::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 50%;
+  clip-path: inset(0 0 0 50%);
+}
+
+/* SUN (light mode cue) */
+.theme-icon.sun::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #020617;
+  border-radius: 50%;
+}
+
+/* Show correct icon per theme */
+.theme-icon.sun {
+  opacity: 0;
+}
+
+[data-theme="light"] .theme-icon.sun {
+  opacity: 0.7;
+}
+
+[data-theme="light"] .theme-icon.moon {
+  opacity: 0;
+}
+
 
 /* =====================
    HERO (VIDEO BACKGROUND – CLEAN)
