@@ -378,14 +378,27 @@ body {
 .btn-secondary {
   background: transparent;
   color: #ffffff;
-  border: 2px solid #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: none;
 }
 
 .btn-secondary:hover {
   background: #ffffff;
-  color: var(--bg-deep);
+  color: #020617;
   transform: translateY(-2px);
 }
+
+/* LIGHT MODE SAFETY (hero is dark even in light theme) */
+[data-theme="light"] .btn-secondary {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: #ffffff;
+  color: #020617;
+}
+
 
 /* =====================
    ABOUT + FEATURES
