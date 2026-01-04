@@ -1458,3 +1458,18 @@ button {
 .header nav a.active {
   color: #ffffff !important;
 }
+/* =====================
+   CTA BUTTON TEXT FIX
+   (Dark background safety)
+===================== */
+
+.contact-cta .btn,
+.contact-cta .btn-primary {
+  color: #ffffff !important;
+}
+
+.contact-cta .btn:hover,
+.contact-cta .btn-primary:hover {
+  color: #020617 !important;
+}
+
