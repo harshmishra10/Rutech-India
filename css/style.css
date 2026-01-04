@@ -1018,29 +1018,31 @@ body {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background: #25d366;
+  bottom: 24px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  background: #25D366; /* Official WhatsApp green */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   z-index: 999;
-  transition: all 0.3s ease;
-  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1); /* White icon */
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-.whatsapp-icon {
-  font-size: 28px;
-}
 
 /* =====================
    BACK TO TOP BUTTON
@@ -1384,5 +1386,18 @@ button {
 @media (min-width: 769px) {
   .menu-toggle {
     display: none !important;
+  }
+}
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float img {
+    width: 26px;
+    height: 26px;
   }
 }
