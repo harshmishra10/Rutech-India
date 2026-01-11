@@ -96,18 +96,19 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =====================
      HEADER SHRINK
   ===================== */
+let lastShrinkState = false;
 
-  const header = document.querySelector(".header");
+function handleHeaderShrink() {
+  if (!header) return;
 
-  function handleHeaderShrink() {
-    if (!header) return;
+  const shouldShrink = window.scrollY > 80;
 
-    if (window.scrollY > 60) {
-      header.classList.add("shrink");
-    } else {
-      header.classList.remove("shrink");
-    }
+  if (shouldShrink !== lastShrinkState) {
+    header.classList.toggle("shrink", shouldShrink);
+    lastShrinkState = shouldShrink;
   }
+}
+
 
   /* =====================
      PRODUCT ACCORDION (FIXED)
