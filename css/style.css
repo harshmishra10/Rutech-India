@@ -1296,10 +1296,10 @@ button {
   /* Mobile Nav Menu */
   .main-nav {
     position: fixed;
-    top: 64px;
+    top: 84px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 64px);
+    height: calc(100vh - 84px);
     background: linear-gradient(to bottom, var(--bg-header), var(--bg-deep));
     display: flex;
     flex-direction: column;
