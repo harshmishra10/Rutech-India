@@ -1306,14 +1306,12 @@ button {
 
 
 
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: var(--text-nav);
-    cursor: pointer;
-    z-index: 1001;
+ .menu-toggle {
+    line-height: 1;
+    padding: 6px;       /* touch target without visual bulk */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
    @media (max-width: 768px) {
   .map-container iframe {
