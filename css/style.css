@@ -1441,10 +1441,27 @@ button {
   }
 
   /* Contact Page */
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
+   @media (min-width: 769px) {
+.contact-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
   }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-form {
+    margin-top: 0;
+  }
+}
+   @media (min-width: 769px) {
+  .contact-form {
+    padding-top: 8px;
+  }
+}
 
   /* Products */
   .products-page {
