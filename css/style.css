@@ -1296,10 +1296,16 @@ button {
 }
 
 
+@media (max-width: 768px) {
   .logo-text {
-    font-size: 21px;
-    letter-spacing: 1px;
+    font-size: 24px;     /* increased */
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1;
+    white-space: nowrap; /* prevents wrap */
   }
+}
+
 
   .menu-toggle {
     display: block;
