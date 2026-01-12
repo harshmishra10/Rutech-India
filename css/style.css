@@ -164,8 +164,12 @@ body {
 
 .logo-wrap img {
   height: 50px;
-  transition: filter 0.3s ease;
+  width: auto;              /* prevents horizontal stretch */
+  aspect-ratio: auto;       /* safety */
+  object-fit: contain;      /* critical */
+  flex-shrink: 0;           /* prevents squashing in flex */
 }
+
 
 .logo-wrap:hover img {
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.35));
@@ -1284,9 +1288,13 @@ button {
     justify-content: space-between;
   }
 
+@media (max-width: 768px) {
   .logo-wrap img {
     height: 34px;
+    width: auto;
   }
+}
+
 
   .logo-text {
     font-size: 21px;
