@@ -225,6 +225,13 @@ body {
 .header nav a.active {
   color: var(--text-main);
 }
+.menu-toggle {
+  background: transparent;
+  border: none;
+  color: #ffffff;          /* icon color */
+  cursor: pointer;
+}
+
 
 /* =====================
    THEME TOGGLE BUTTON
