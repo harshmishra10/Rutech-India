@@ -1314,12 +1314,28 @@ button {
 
 
  .menu-toggle {
-    line-height: 1;
-    padding: 6px;       /* touch target without visual bulk */
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 28px;
+    line-height: 1;
+
+    background: transparent;   /* ← critical */
+    border-radius: 6px;
+
+    color: #ffffff;
   }
+
+  .menu-toggle:focus,
+  .menu-toggle:active {
+    outline: none;
+    background: rgba(255, 255, 255, 0.08); /* subtle feedback */
+  }
+   
    @media (max-width: 768px) {
   .map-container iframe {
     aspect-ratio: 4 / 3;
