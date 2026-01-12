@@ -761,7 +761,18 @@ body {
 }
 
 .map-container {
-  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  display: block;
 }
 
 /* Contact Form */
@@ -1291,6 +1302,12 @@ button {
     cursor: pointer;
     z-index: 1001;
   }
+   @media (max-width: 768px) {
+  .map-container iframe {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 
   /* Mobile Nav Menu */
   .main-nav {
