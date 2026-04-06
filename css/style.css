@@ -1559,4 +1559,72 @@ button {
 .contact-cta .btn-primary:hover {
   color: #020617 !important;
 }
+/* =====================
+   CONTACT PAGE – MOBILE FIX (CLEAN)
+===================== */
 
+@media (max-width: 768px) {
+
+  .contact-container {
+    padding: 0 16px;
+  }
+
+  .contact-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .contact-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  /* STACK PROPERLY */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* FIX TEXT ALIGNMENT */
+  .contact-info {
+    text-align: left;
+  }
+
+  .contact-info h3,
+  .contact-form h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* MAKE EMAIL/PHONE WRAP NICELY */
+  .contact-info a {
+    word-break: break-word;
+  }
+
+  /* MAP FIX */
+  .map-container iframe {
+    height: 200px;
+  }
+
+  /* FORM FIX */
+  .contact-form form {
+    gap: 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
